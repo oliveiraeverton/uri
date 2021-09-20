@@ -6,8 +6,6 @@ public class Main {
 
         Dinheiro dinheiro = new Dinheiro();
 
-        //System.out.println();
-
         //VETOR
         int vetor[];
         vetor = new int[2];
@@ -63,8 +61,9 @@ public class Main {
 
 
 
-    }//fim do main(String)
-}//fim do Main
+    }
+}
+
 class Dinheiro{
 
     int inteiro;
@@ -77,18 +76,21 @@ class Dinheiro{
         this.entrada = input.nextFloat();
     }
 
+    
+    //retorna o valor inteiro da entrada sem a parte decimal
     public int getInteiro(){
         this.inteiro = (int) this.entrada;
-        //System.out.printf("PARTE INTEIRA: %d \n",this.inteiro);
         return inteiro;
     }
+ 
+   //retorna o valor decimal como inteiro
     public int getResto(int inteiro){
         this.resto = (int)(this.entrada*100 - inteiro*100);
-       //System.out.printf("PARTE DO RESTO: %d \n", this.resto);
-        
         return resto;
     }
 
+ 
+    //retorna um vetor de 2 posições, sendo a primeira o truncamento da divisão e a outra o mod da operacao como inteiro
     public int[] divmod(int dividendo, int divisor){
         int vetor[];
         vetor = new int[2];
