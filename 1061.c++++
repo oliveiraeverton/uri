@@ -1,0 +1,20 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+    
+        int seis = 6;
+        int contador = 0;
+        double entrada;
+        while(seis>0){
+            seis--;
+            entrada = double.Parse(Console.ReadLine());
+            if(entrada>0){
+                contador++;
+            }
+    }
+    Console.WriteLine(string.Format("{0} valores positivos", contador));
+
+    }
+}
